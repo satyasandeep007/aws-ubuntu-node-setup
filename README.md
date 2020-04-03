@@ -83,6 +83,10 @@ pm2 start hello.js
 
 ```
 git clone https://github.com/satyasandeep007/Weather-App.git
+```
+Enter Username and password to verify that you have access to the repository
+
+```
 cd Weather-App
 ls -l
 npm install
@@ -124,8 +128,10 @@ Login to server via SSH
 ```
 cd Weather-App
 git pull origin master
-UserName:
-Password:
+```
+Enter Username and password to verify that you have access to the repository
+Add Commit message if you are not master
+```
 pm2 restart server.js
 pm2 log
 ```
