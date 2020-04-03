@@ -5,26 +5,42 @@ Login using ssh on pc
 
 ### Install Nginx
 
-``` sudo apt update ```
-``` sudo apt install nginx ```
-``` sudo ufw app list ```
-``` sudo ufw allow 'Nginx HTTP' ```
-``` sudo ufw status``` 
-``` sudo ufw enable    ``` 
-sudo ufw allow OpenSSH ``` 
-``` systemctl status nginx ``` 
-``` curl -4 icanhazip.com  ``` 
+``` 
+sudo apt update 
+sudo apt install nginx 
+
+```
+
+```
+sudo ufw app list 
+sudo ufw allow 'Nginx HTTP' 
+sudo ufw status
+
+``` 
+
+```
+sudo ufw enable   
+sudo ufw allow OpenSSH 
+``` 
+
+``` 
+systemctl status nginx  
+curl -4 icanhazip.com 
+
+``` 
 
 ### Node Setup
 
-``` cd ~   ``` 
-``` curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh   ``` 
-``` nano nodesource_setup.sh   ``` 
-``` sudo bash nodesource_setup.sh  ``` 
-``` sudo apt install nodejs``` 
-``` nodejs -v  ``` 
-``` npm -v ``` 
-``` sudo apt install build-essential   ``` 
+``` 
+cd ~  
+curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh   
+nano nodesource_setup.sh   
+sudo bash nodesource_setup.sh  
+sudo apt install nodejs 
+nodejs -v  
+npm -v 
+sudo apt install build-essential   
+``` 
 
 ### Check Nginx and Node using hello.js
 
@@ -33,7 +49,7 @@ cd ~
 nano hello.js 
 ``` 
 
-now copy paste following
+Now copy paste following
 
 ```
 const http = require('http');
@@ -52,10 +68,15 @@ server.listen(port, hostname, () => {
 });
 
 ```
-``` node hello.js ``` 
+Start hello
+```
+node hello.js 
+``` 
+
 ```
 sudo npm install pm2@latest -g
 pm2 start hello.js
+
 ```
 
 ### Deploy Node App from git
@@ -69,11 +90,15 @@ sudo npm update
 pm2 start server.js
 ```
 
-``` pm2 list ```
+``` 
+pm2 list 
+```
 
 ### Assigning port to Node App
 
-``` sudo nano /etc/nginx/sites-available/default ```
+``` 
+sudo nano /etc/nginx/sites-available/default 
+```
 
 Copy paste inside server block
 
@@ -104,6 +129,3 @@ Password:
 pm2 restart server.js
 pm2 log
 ```
-
-
-
