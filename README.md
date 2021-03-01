@@ -13,12 +13,7 @@ sudo apt install nginx
 
 ```
 sudo ufw app list
-sudo ufw allow 'Nginx HTTP'
 sudo ufw status
-
-```
-
-```
 sudo ufw enable
 sudo ufw allow OpenSSH
 ```
@@ -40,6 +35,8 @@ sudo apt install nodejs
 nodejs -v
 npm -v
 sudo apt install build-essential
+
+sudo npm install pm2@latest -g
 
 ```
 
